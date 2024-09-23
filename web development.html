@@ -267,17 +267,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body form-wrapper">
-                    <form>
+                    <form id="callbackForm">
                         <button type="button" class="btn-close btn btn-light" style="position: absolute; margin-left: 415px; margin-top: -20px;" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div class="forms-body">
                           <div class="wrapper-title wrapper-color">REQUEST A CALLBACK</div>
                           <label class="wrapper-color wrapper-label">Name :</label>
-                          <input type="text" class="wrapper-input">
+                          <input type="text" class="wrapper-input" id="callbackName">
+                          <div id="nameError" class="error-message" style="color: red;"></div>
                           <label class="wrapper-color wrapper-label">Phone :</label>
-                          <input type="tel" class="wrapper-input"> 
+                          <input type="tel" class="wrapper-input" id="callbackPhone"> 
+                          <div id="phoneError" class="error-message" style="color: red;"></div>
                           <label class="wrapper-color wrapper-label">Email :</label>
-                          <input type="email" class="wrapper-input">
-                          <button class="wrapper-button">submit</button>
+                          <input type="email" class="wrapper-input" id="callbackEmail">
+                          <div id="emailError" class="error-message" style="color: red;"></div>
+                          <button type="submit" class="wrapper-button">submit</button>
                         </div>
                     </form>
                 </div>
@@ -308,17 +311,20 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body form-wrapper">
-                        <form>
+                        <form id="callbackForm6">
                             <button type="button" class="btn-close btn btn-light" style="position: absolute; margin-left: 415px; margin-top: -20px;" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div class="forms-body">
                               <div class="wrapper-title wrapper-color">REQUEST A CALLBACK</div>
                               <label class="wrapper-color wrapper-label">Name :</label>
-                              <input type="text" class="wrapper-input">
+                              <input type="text" class="wrapper-input" id="callbackName6">
+                              <div id="nameError6" class="error-message" style="color: red;"></div>
                               <label class="wrapper-color wrapper-label">Phone :</label>
-                              <input type="tel" class="wrapper-input"> 
+                              <input type="tel" class="wrapper-input" id="callbackPhone6"> 
+                              <div id="phoneError6" class="error-message" style="color: red;"></div>
                               <label class="wrapper-color wrapper-label">Email :</label>
-                              <input type="email" class="wrapper-input">
-                              <button class="wrapper-button">submit</button>
+                              <input type="email" class="wrapper-input" id="callbackEmail6">
+                              <div id="emailError6" class="error-message" style="color: red;"></div>
+                              <button type="submit" class="wrapper-button">submit</button>
                             </div>
                         </form>
                     </div>
@@ -326,7 +332,6 @@
             </div>
         </div>
     </div>
-
     <!-- content end -->
     <!-- Screenshot Start -->
     <div class="container-xxl py-2">
@@ -486,16 +491,15 @@
                         <div class="box-container">
                             <div class="box">
                                 <i class="fas fa-sort-amount-down"></i>
-                                <h3>High Quality</h3>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta
-                                    eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+                                <h3>
+                                    Fast Transfer Speed</h3>
+                                <p> With fast transfer speed, your website will load lightning-fast, providing a seamless user experience for your visitors. Our team utilizes the latest technology and optimization techniques to ensure that your website not only looks great but also loads quickly.</p>
                             </div>
                             <div class="box">
                                 <i class="fas fa-user-clock"></i>
                                 <h3>
                                     Mobile Compatible</h3>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta
-                                    eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+                                <p>With fast transfer speed, your website will load lightning-fast, providing a seamless user experience for your visitors. Our team utilizes the latest technology and optimization techniques to ensure that your website not only looks great but also loads quickly.</p>
                             </div>
                         </div>
                     </div>
@@ -507,15 +511,14 @@
                             <div class="box">
                                 <i class="fas fa-sort-amount-up"></i>
                                 <h3>
-                                    Fast Transfer Speed</h3>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta
-                                    eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+                                    Easy to use, Customizable</h3>
+                                <p>It refers to the user-friendliness and flexibility of our websites. We develop websites that are easy to navigate and customize, allowing clients to make changes and updates as needed.</p>
                             </div>
                             <div class="box">
                                 <i class="fas fa-fire"></i>
-                                <h3>Standard SEO design</h3>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta
-                                    eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+                                <h3>
+                                    Standard SEO design</h3>
+                                <p>Our team of experts will work closely with you to understand your business objectives and target audience, conduct thorough keyword research, and implement on-page optimization techniques such as metadata, content optimization, and URL structure, to name a few. With our standard SEO design.</p>
                             </div>
                         </div>
                     </div>
@@ -531,9 +534,12 @@
                 <div class="row g-5">
                       <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                              <div class="h-100">
-                                 <h6 class="section-title bg-white text-start text-secondary pe-3">why Choose Us</h6>
-                                 <h1 class="display-6 mb-4">Why People Trust Us? Learn About us</h1>
-                                 <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+                                 <h6 class="section-title bg-white text-start text-secondary pe-3">Who We Are ?</h6>
+                                 <h1 class="display-6 mb-4">Words to describe the team</h1>
+                                 <p class="mb-4">Gradiente Digital Marketing Agency in Hyderabad is a team of highly skilled and experienced professionals who are passionate about creating innovative and effective digital solutions for their clients. With a commitment to excellence and a focus on customer satisfaction, the team at Gradiente works closely with each client to understand their unique needs and develop customized strategies to achieve their goals. </p>
+                                 <p class="mb-4">From creating stunning websites and engaging mobile apps to develop effective marketing campaigns and providing ongoing support and maintenance.</p>
+                                 <p class="mb-4">Our team prides itself on their ability to think outside the box and come up with creative solutions to even the most complex challenges. With a deep understanding of the latest technologies and trends, as well as a dedication to staying up-to-date with the latest industry best practices.
+                                 </p>
                                  <div class="row g-4">
                                         <div class="col-12">
                                                 <div class="skill">
@@ -604,7 +610,6 @@
                   </div>
               </div>
               <div class="col-lg-2 col-md-2">
-                  <!-- <button type="submit" class="btn btn-warning border-0 w-100 g-5">GET MY FREE QUOTE</button> -->
                   <button class="button-more"><span class="text-light">GET MY FREE QUOTE</span></button>
               </div>
           </div>
@@ -742,6 +747,22 @@
         </div>
     </div>
     <!-- footer end -->
+     <!-- pop up start -->
+    <div id="popupWindow" class="popup">
+        <div class="popup-content">
+            <span id="close" class="close">&times;</span>
+            <h2>Welcome!</h2>
+            <p class="text-white">Please fill in your details:</p>
+            <form id="userForm">
+                <input class="wrapper-input" type="text" id="name" placeholder="Name" required>
+                <input class="wrapper-input" type="email" id="email" placeholder="Email (Gmail)" required>
+                <input class="wrapper-input" type="tel" id="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                <button type="submit" class="btn-wrappers">Submit</button>
+            </form>
+            <button id="okButton" class="btn-wrappers" style="display:none;">OK</button> 
+        </div>
+    </div> 
+    <!-- pop up end -->
      <!-- Back to Top -->
         <div id="progress">
             <span id="progress-value">&#x1F815;</span>

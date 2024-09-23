@@ -240,17 +240,20 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body form-wrapper">
-                                    <form>
+                                    <form id="callbackForm">
                                         <button type="button" class="btn-close btn btn-light" style="position: absolute; margin-left: 415px; margin-top: -20px;" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div class="forms-body">
                                           <div class="wrapper-title wrapper-color">REQUEST A CALLBACK</div>
                                           <label class="wrapper-color wrapper-label">Name :</label>
-                                          <input type="text" class="wrapper-input">
+                                          <input type="text" class="wrapper-input" id="callbackName">
+                                          <div id="nameError" class="error-message" style="color: red;"></div>
                                           <label class="wrapper-color wrapper-label">Phone :</label>
-                                          <input type="tel" class="wrapper-input"> 
+                                          <input type="tel" class="wrapper-input" id="callbackPhone"> 
+                                          <div id="phoneError" class="error-message" style="color: red;"></div>
                                           <label class="wrapper-color wrapper-label">Email :</label>
-                                          <input type="email" class="wrapper-input">
-                                          <button class="wrapper-button">submit</button>
+                                          <input type="email" class="wrapper-input" id="callbackEmail">
+                                          <div id="emailError" class="error-message" style="color: red;"></div>
+                                          <button type="submit" class="wrapper-button">submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -376,10 +379,9 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                        <h6 class="section-title text-secondary pe-3 bg-white text-start">Reach Audience</h6>
-                        <h1 class="display-6 mb-4 py-1">Better Targeting Insights</h1>
-                        <p class="mb-4">Our services include strategies that provide businesses with more accurate and
-                            effective targeting insights to reach their ideal audience.</p>
+                        <h6 class="section-title text-secondary pe-3 bg-white text-start">Grow Your Business</h6>
+                        <h1 class="display-6 mb-4 py-1">SEO Marketing Agency for Business Growth</h1>
+                        <p class="mb-4">Benefit from top-notch SEO services that can help you grow your business and enhance your online presence.</p>
                     </div>
                     <ul class="features-list">
                         <li>
@@ -387,10 +389,10 @@
                                 <div class="item-content">
                                     <h6 class=" h4 item-title"><img src="img/check (1).png" width="20px" height="20px"
                                             alt="img-icon">
-                                        &nbsp; Advanced Analytics Review </h6>
+                                        &nbsp; Discover Progress </h6>
                                     <p class="item-text ms-5">
-                                        Comprehensive analytics tools to review data and gain insights. Improve your
-                                        strategy with detailed metrics and reports.
+                                        Unleash your business's potential and discover progress by utilizing effective SEO techniques.
+
                                     </p>
                                 </div>
                             </div>
@@ -400,11 +402,11 @@
                                 <div class="item-content">
                                     <h6 class="py-2 h4 item-title"><img src="img/check (1).png" width="20px"
                                             height="20px" alt="img-icon">
-                                        &nbsp; Email Marketing Campaigns </h6>
+                                        &nbsp; 
+                                        Analyze Your Website's SEO </h6>
                                     <h6 class="text-secondary">
                                         <p class="item-text ms-5">
-                                            Manage and optimize your email marketing campaigns with powerful tools and
-                                            analytics to boost engagement.
+                                            Get a detailed report of your website's SEO performance and identify areas that require improvement..
                                         </p>
                                 </div>
                             </div>
@@ -414,46 +416,37 @@
                                 <div class="item-content">
                                     <h6 class="py-2 h4 item-title"><img src="img/check (1).png" width="20px"
                                             height="20px" alt="img-icon">
-                                        &nbsp; Content Marketing </h6>
+                                        &nbsp; Enhance Your Business with SEO </h6>
                                     <h6 class="text-secondary">
                                         <p class="item-text ms-5">
-                                            Porta semper lacus cursus feugiat primis ultrice ligula risus auctor tempus
-                                            feugiat impedit undo auctor felis augue mauris aoreet tempor.
+                                            Improve your online visibility and grow your business by utilizing effective SEO techniques.
                                         </p>
                                 </div>
                             </div>
                         </li>
                     </ul>
                     <br>
-                    <!-- <button type="button" class="btn btn-primary ms-5" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        GET MY FREE QUOTE
-                    </button> -->
-                    
                     <button class="button-more" data-bs-toggle="modal" data-bs-target="#exampleModal"><span class="text-white">GET MY FREE QUOTE</span></button>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <!-- <div class="modal-header">
-                                    <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">GET MY FREE QUOTE
-                                    </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div> -->
                                 <div class="modal-body form-wrapper">
-                                    <form>
+                                    <form id="callbackForm">
                                         <button type="button" class="btn-close btn btn-light" style="position: absolute; margin-left: 415px; margin-top: -20px;" data-bs-dismiss="modal" aria-label="Close"></button>
                                         <div class="forms-body">
                                           <div class="wrapper-title wrapper-color">REQUEST A CALLBACK</div>
                                           <label class="wrapper-color wrapper-label">Name :</label>
-                                          <input type="text" class="wrapper-input">
+                                          <input type="text" class="wrapper-input" id="callbackName">
+                                          <div id="nameError" class="error-message" style="color: red;"></div>
                                           <label class="wrapper-color wrapper-label">Phone :</label>
-                                          <input type="tel" class="wrapper-input"> 
+                                          <input type="tel" class="wrapper-input" id="callbackPhone"> 
+                                          <div id="phoneError" class="error-message" style="color: red;"></div>
                                           <label class="wrapper-color wrapper-label">Email :</label>
-                                          <input type="email" class="wrapper-input">
-                                          <button class="wrapper-button">submit</button>
+                                          <input type="email" class="wrapper-input" id="callbackEmail">
+                                          <div id="emailError" class="error-message" style="color: red;"></div>
+                                          <button type="submit" class="wrapper-button">submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -475,7 +468,7 @@
                     &nbsp; Why Choose Us
                 </h5>
             </div>
-            <h1 class="display-6 text-center py-1">We Are Here to Grow Your Business Exponentially</h1>
+            <h1 class="display-6 text-center py-1">Choose our digital marketing agency for your business needs.</h1>
 
             <div class="row g-5 py-5">
                 <div class="col-lg-4">
@@ -486,7 +479,7 @@
                                 <i class="fa fa-cubes text-white"></i>
                             </div>
                             <h4>Link Building Strategies</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <p class="mb-0">We build high-quality links and enhance your website's ranking with effective link-building strategies.</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
                             <div class="rounded d-flex align-items-center justify-content-center mb-3"
@@ -494,7 +487,7 @@
                                 <i class="fa fa-award text-white"></i>
                             </div>
                             <h4>Optimization Techniques</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <p class="mb-0">We optimize your website's content and structure to improve your online visibility and ranking</p>
                         </div>
                     </div>
                 </div>
@@ -512,7 +505,7 @@
                                 <i class="fa fa-users-cog text-white"></i>
                             </div>
                             <h4>Email Marketing Solutions</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <p class="mb-0">We help you to reach out to your target audience effectively and efficiently with customized email marketing solutions.</p>
                         </div>
                         <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
                             <div class="rounded d-flex align-items-center justify-content-center mb-3"
@@ -520,7 +513,7 @@
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <h4>Website Development Services</h4>
-                            <p class="mb-0">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+                            <p class="mb-0">We Create websites which are fully developed with all the services for user experience.</p>
                         </div>
                     </div>
                 </div>
@@ -553,7 +546,6 @@
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-2">
-                        <!-- <button type="submit" class="btn btn-warning border-0 w-100 g-5">GET MY FREE QUOTE</button> -->
                         <button type="submit" class="button-more"><span class="text-light">GET MY FREE QUOTE</span></button>
                     </div>
                 </div>
@@ -563,8 +555,8 @@
     <!-- end -->
 
 
-     <!-- clients review starts -->
-  <div class="container-xxl py-5">
+ <!-- clients review starts -->
+<div class="container-xxl py-5">
     <div class="container">
           <div class="mx-auto text-center wow fadeInUp mb-5" data-wow-delay="0.1s" style="max-width: 600px;">
             <h6 class="section-title text-center text-secondary px-3 bg-white">Clients Review</h6>
@@ -579,7 +571,7 @@
                         <span>role ?</span>
                     </div>
                 </div>
-                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="mb-0">I am so glad that I chose Gradiente-Digital-Marketing for my digital marketing needs. Their team is experienced, creative, and results-driven. They have helped me to reach my target audience more effectively and have generated significant ROI for my business. I appreciate their commitment to transparency and their willingness to work closely with me to achieve my goals. Highly recommend Gradiente-Digital-Marketing to any business owner looking to take their digital marketing to the next level</p>
              </div>
              <div class="testimonial-item bg-light rounded p-4">
                 <div class="d-flex mb-4 align-items-center"> 
@@ -589,7 +581,7 @@
                         <span>role</span>
                     </div>
                 </div>
-                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="mb-0">Gradiente-Digital-Marketing has been a great partner in our digital marketing efforts. Their team is knowledgeable, responsive, and always willing to go the extra mile to ensure our success. They have helped us to optimize our online presence and improve our search engine rankings, which has led to increased traffic and more sales. Highly recommend Gradiente-Digital-Marketing to anyone looking for a reliable and effective digital marketing</p>
              </div>
              <div class="testimonial-item rounded bg-light p-4">
                 <div class="mb-4 align-items-center d-flex">
@@ -599,7 +591,7 @@
                         <span>role</span>
                     </div>
                 </div>
-                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="mb-0">I have been working with Gradiente-Digital-Marketing for several months and have been extremely impressed with their level of expertise and professionalism. They have helped me to streamline my digital marketing efforts and have provided me with valuable insights that have helped me to make more informed decisions. I would highly recommend Gradiente-Digital-Marketing to any business owner looking to improve their online presence</p>
              </div>
              <div class="testimonial-item rounded bg-light p-4">
                 <div class="align-items-center d-flex mb-4">
@@ -609,7 +601,7 @@
                         <span>role</span>
                     </div>
                 </div>
-                <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="mb-0">Gradiente-Digital-Marketing has been an excellent partner in our digital marketing efforts. Their team has helped us to develop and implement effective strategies for improving our online visibility, driving traffic to our website, and increasing engagement with our target audience. Their attention to detail and willingness to go above and beyond have been invaluable to our success</p>
              </div>
         </div>
     </div>
@@ -694,6 +686,22 @@
             </div>
         </div>
         <!-- footer end -->
+         <!-- pop up start -->
+        <div id="popupWindow" class="popup">
+            <div class="popup-content">
+                <span id="close" class="close">&times;</span>
+                <h2>Welcome!</h2>
+                <p class="text-white">Please fill in your details:</p>
+                <form id="userForm">
+                    <input class="wrapper-input" type="text" id="name" placeholder="Name" required>
+                    <input class="wrapper-input" type="email" id="email" placeholder="Email (Gmail)" required>
+                    <input class="wrapper-input" type="tel" id="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number">
+                    <button type="submit" class="btn-wrappers">Submit</button>
+                </form>
+                <button id="okButton" class="btn-wrappers" style="display:none;">OK</button> 
+            </div>
+        </div> 
+        <!-- pop up end -->
     <!-- Back to Top -->
         <div id="progress">
             <span id="progress-value">&#x1F815;</span>

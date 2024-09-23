@@ -1,34 +1,52 @@
 // Validation for Form 6
 document.getElementById("quoteForm6").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("nameError6").textContent = "";
-    document.getElementById("phoneError6").textContent = "";
-    document.getElementById("emailError6").textContent = "";
+  event.preventDefault();
+  // Clear previous error messages
+  document.getElementById("nameError6").textContent = "";
+  document.getElementById("phoneError6").textContent = "";
+  document.getElementById("emailError6").textContent = "";
 
-    var name = document.getElementById("inputName6").value.trim();
-    var phone = document.getElementById("inputPhone6").value.trim();
-    var email = document.getElementById("inputEmail6").value.trim();
+  // Get form values
+  var name = document.getElementById("inputName6").value.trim();
+  var phone = document.getElementById("inputPhone6").value.trim();
+  var email = document.getElementById("inputEmail6").value.trim();
 
-    var isValid = true;
+  var isValid = true;
 
-    if (name === "") {
-        document.getElementById("nameError6").textContent = "Please enter your name.";
-        isValid = false;
-    }
+  // Basic validation
+  if (name === "") {
+      document.getElementById("nameError6").textContent = "Please enter your name.";
+      isValid = false;
+  }
 
-    if (phone === "" || !/^\d{10}$/.test(phone)) {
-        document.getElementById("phoneError6").textContent = "Please enter a valid 10-digit phone number.";
-        isValid = false;
-    }
+  if (phone === "" || !/^\d{10}$/.test(phone)) {
+      document.getElementById("phoneError6").textContent = "Please enter a valid 10-digit phone number.";
+      isValid = false;
+  }
 
-    if (email === "" || !/^\S+@\S+\.\S+$/.test(email)) {
-        document.getElementById("emailError6").textContent = "Please enter a valid email address.";
-        isValid = false;
-    }
+  if (email === "" || !/^\S+@\S+\.\S+$/.test(email)) {
+      document.getElementById("emailError6").textContent = "Please enter a valid email address.";
+      isValid = false;
+  }
 
-    if (isValid) {
-        document.getElementById("quoteForm6").submit();
-    }
+  // If all validations pass, submit the form via fetch
+  if (isValid) {
+      fetch('http://localhost:3000/submit-quote', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, phone, email }),
+      })
+      .then(response => response.text())
+      .then(data => {
+          alert(data);
+          document.getElementById("quoteForm6").reset(); // Reset the form after submission
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+  }
 });
    // Back to top button
   
@@ -53,3 +71,130 @@ let calcScrollValue = () => {
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
+
+
+
+
+
+// ppc button validation
+document.getElementById("callbackForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  // Clear previous error messages
+  document.getElementById("nameError").textContent = "";
+  document.getElementById("phoneError").textContent = "";
+  document.getElementById("emailError").textContent = "";
+
+  // Get form values
+  var name = document.getElementById("callbackName").value.trim();
+  var phone = document.getElementById("callbackPhone").value.trim();
+  var email = document.getElementById("callbackEmail").value.trim();
+
+  var isValid = true;
+
+  // Validation checks
+  if (name === "") {
+      document.getElementById("nameError").textContent = "Please enter your name.";
+      isValid = false;
+  }
+
+  if (phone === "" || !/^\d{10}$/.test(phone)) {
+      document.getElementById("phoneError").textContent = "Please enter a valid 10-digit phone number.";
+      isValid = false;
+  }
+
+  if (email === "" || !/^\S+@\S+\.\S+$/.test(email)) {
+      document.getElementById("emailError").textContent = "Please enter a valid email address.";
+      isValid = false;
+  }
+
+  // If validation passes, submit the form
+  if (isValid) {
+      const formData = {
+          name: name,
+          phone: phone,
+          email: email,
+      };
+
+      try {
+          const response = await fetch('http://localhost:3000/submit-quote', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+              alert("Form submitted successfully!");
+              document.getElementById("callbackForm").reset();
+          } else {
+              alert("Error submitting the form.");
+          }
+      } catch (error) {
+          alert("Error: " + error.message);
+      }
+  }
+});
+
+// ppc button 5 validation
+
+document.getElementById("callbackForm5").addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  // Clear previous error messages
+  document.getElementById("nameError5").textContent = "";
+  document.getElementById("phoneError5").textContent = "";
+  document.getElementById("emailError5").textContent = "";
+
+  // Get form values
+  var name = document.getElementById("callbackName5").value.trim();
+  var phone = document.getElementById("callbackPhone5").value.trim();
+  var email = document.getElementById("callbackEmail5").value.trim();
+
+  var isValid = true;
+
+  // Validation checks
+  if (name === "") {
+      document.getElementById("nameError5").textContent = "Please enter your name.";
+      isValid = false;
+  }
+
+  if (phone === "" || !/^\d{10}$/.test(phone)) {
+      document.getElementById("phoneError5").textContent = "Please enter a valid 10-digit phone number.";
+      isValid = false;
+  }
+
+  if (email === "" || !/^\S+@\S+\.\S+$/.test(email)) {
+      document.getElementById("emailError5").textContent = "Please enter a valid email address.";
+      isValid = false;
+  }
+
+  // If validation passes, send the data to the server
+  if (isValid) {
+      const formData = {
+          name: name,
+          phone: phone,
+          email: email,
+      };
+
+      try {
+          const response = await fetch('http://localhost:3000/submit-quote', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+              alert("Form submitted successfully!");
+              document.getElementById("callbackForm5").reset();
+          } else {
+              alert("Error submitting the form.");
+          }
+      } catch (error) {
+          alert("Error: " + error.message);
+      }
+  }
+});

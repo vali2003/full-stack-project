@@ -16,14 +16,18 @@ new WOW().init();
 // Validation for Form 4
 document.getElementById("quoteForm4").addEventListener("submit", function(event) {
     event.preventDefault();
+
+    // Clear previous error messages
     document.getElementById("nameError4").textContent = "";
     document.getElementById("phoneError4").textContent = "";
     document.getElementById("emailError4").textContent = "";
 
+    // Get form values
     var name = document.getElementById("inputName4").value.trim();
     var phone = document.getElementById("inputPhone4").value.trim();
     var email = document.getElementById("inputEmail4").value.trim();
 
+    // Basic validation
     var isValid = true;
 
     if (name === "") {
@@ -41,21 +45,40 @@ document.getElementById("quoteForm4").addEventListener("submit", function(event)
         isValid = false;
     }
 
+    // If all validations pass, submit the form via fetch
     if (isValid) {
-        document.getElementById("quoteForm4").submit();
+        fetch('http://localhost:3000/submit-quote', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, phone, email }),
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+            document.getElementById("quoteForm4").reset(); // Reset the form after submission
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 });
 // Validation for Form 5
 document.getElementById("quoteForm5").addEventListener("submit", function(event) {
     event.preventDefault();
+
+    // Clear previous error messages
     document.getElementById("nameError5").textContent = "";
     document.getElementById("phoneError5").textContent = "";
     document.getElementById("emailError5").textContent = "";
 
+    // Get form values
     var name = document.getElementById("inputName5").value.trim();
     var phone = document.getElementById("inputPhone5").value.trim();
     var email = document.getElementById("inputEmail5").value.trim();
 
+    // Basic validation
     var isValid = true;
 
     if (name === "") {
@@ -73,11 +96,25 @@ document.getElementById("quoteForm5").addEventListener("submit", function(event)
         isValid = false;
     }
 
+    // If all validations pass, submit the form via fetch
     if (isValid) {
-        document.getElementById("quoteForm5").submit();
+        fetch('http://localhost:3000/submit-quote', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, phone, email }),
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+            document.getElementById("quoteForm5").reset(); // Reset the form after submission
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 });
- 
     // Back to top button
     
 let calcScrollValue = () => {
@@ -101,3 +138,4 @@ let calcScrollValue = () => {
   
   window.onscroll = calcScrollValue;
   window.onload = calcScrollValue;
+  
